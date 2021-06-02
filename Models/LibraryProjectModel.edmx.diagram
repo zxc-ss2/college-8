@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3fd76574941f4bbc98a2b3d04d0adf15" Name="Diagram1">
+        <EntityTypeShape EntityType="LibraryModel.books" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.chambers" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.clients" Width="1.5" PointX="6" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.fields" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.formular" Width="1.5" PointX="3" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.interpretors" Width="1.5" PointX="0.75" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.quantity" Width="1.5" PointX="0.75" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.roles" Width="1.5" PointX="3.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.storage" Width="1.5" PointX="0.75" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.trading" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <AssociationConnector Association="LibraryModel.FK_books_chambers" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_books_fields" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_books_interpretors" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_books_quantity" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_books_storage" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_books_trading" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_client_roles" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_clients_trading" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_formular_trading" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
