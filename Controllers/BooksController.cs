@@ -72,9 +72,17 @@ namespace LibraryProject.Controllers
         /// </param>
         public void DeleteBookInfo(books selectString)
         {
-            dbHelper.context.books.Remove(selectString);
-            dbHelper.context.SaveChanges();
-            MessageBox.Show("Удалена информация о" + selectString);
+            try
+            {
+                dbHelper.context.books.Remove(selectString);
+                dbHelper.context.SaveChanges();
+                MessageBox.Show("Удалена информация о" + selectString);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         /// <summary>

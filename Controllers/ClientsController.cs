@@ -3,6 +3,8 @@ using LibraryProject.Properties;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Windows;
 
 namespace LibraryProject.Controllers
@@ -110,6 +112,22 @@ namespace LibraryProject.Controllers
             dbHelper.context.SaveChanges();
             MessageBox.Show("Удалена информация о" + selectString);
             return true;
+        }
+
+        public void SendInfo(string userLogin,string userPassword)
+        {
+            SmtpClient Smtp = new SmtpClient("smtp.gmail.com", 587);
+            Smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+            Smtp.EnableSsl = true;
+            Smtp.Credentials = new NetworkCredential("", "");
+            MailMessage Message = new MailMessage();
+            Message.From = new MailAddress("");
+            Message.To.Add(new MailAddress("skochkov.aleksey@yandex.ru"));
+            Message.Subject = "Данные для авторизации";
+            Message.Body = "Ваши данные для авторизации:\n Логин:" + userLogin + "Пароль:" + userPassword;
+
+
+            Smtp.Send(Message);
         }
     }
 }
